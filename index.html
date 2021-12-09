@@ -1,0 +1,195 @@
+<!DOCTYPE html><!--22161121 최수빈-->
+<html lang="en" dir="ltr">
+  <head>
+   <meta charset='utf-8'>
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+   <style>
+     * {margin:0;padding:0;}
+
+     .section input[id*="slide"] {display:none;}
+
+     .section .slidewrap {max-width:1550px;margin:0 auto;overflow:hidden;}
+   	 .section .slidelist {white-space:nowrap;font-size:0;}
+   	 .section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+   	 .section .slidelist > li > a {display:block;position:relative;}
+   	 .section .slidelist > li > a img {width:100%;}
+
+     .section .slidelist label {position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+   	 .section .slidelist .left {left:30px; center center / 100% no-repeat;}
+   	 .section .slidelist .right {right:30px; center center / 100% no-repeat;}
+
+     .section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+   	.section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+   	.section input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+     body{
+       font-family: '돋움'
+       font-size: 14px;
+       color: #444444;
+     }
+     li{
+       list-style-type: none;
+     }
+   .clear {
+	 clear: both;
+  }
+   header {
+	 width: 1140px;
+	 height: 100px;
+	 margin: 0 auto;
+	 border: solid 1px white;
+   }
+   #logo{
+     float: left;
+     margin: 20px 0 0 20px;
+     border: solid 1px white;
+   }
+   #menus {
+   	float: right;
+   	border: solid 1px white;
+   }
+   #top_menu {
+   	text-align: right;
+   	margin-top: 20px;
+   	border: solid 1px white;
+   }
+   #main_menu {
+   	margin-top: 50px;
+   	font-family: '맑은고딕';
+   	font-size: 20px;
+   	font-color: black;
+   	border: solid 1px white;
+   }
+   #main_menu li {
+    font-color: black;
+   	display: inline;
+   	margin-left: 80px;
+   }
+   #contents {
+	 width: 1140px;
+	 height: 300px;
+	 margin: 0 auto;
+	 border: solid 1px white;
+   }
+   #main_contents {
+   margin-top: 30px;
+	 width: 880px;
+	 float: right;
+	 border: solid 1px white;
+   }
+   #main_contents h3 {
+   	font-size: 22px;
+   	padding-bottom: 8px;
+   	border-bottom: solid 1px #cccccc;
+   }
+   #main_contents p {
+   	margin-top: 30px;
+   	line-height: 180%;
+   }
+   #main_contents #figure {
+   	margin-top: 30px;
+   	text-align: center;
+   }
+   footer {
+	 width: 100%;
+	 height: 150px;
+	 border: solid 1px white;
+   margin-top: 30px;
+ 	 background-color: #DAC2A0;
+   }
+   #footer_box {
+   	width: 1140px;
+   	height: 70px;
+   	margin: 0 auto;
+   	border: solid 1px none;
+   }
+   #footer_logo {
+   	float: left;
+   	margin: 50px 0 0 30px;
+   	border: solid 1px none;
+   }
+   #address {
+   	float: right;
+   	margin: 50px 30px 0 0;
+   	color: brown;
+   	border: solid 1px none;
+   }
+   a:link{
+     text-decoration:none;
+     color:black;
+   }
+   a:visited{
+     text-decoration: none;
+     color:black;
+   }
+   a:hover{
+     text-decoration: none;
+     color:brown;
+   }
+   a:active{
+     text-decoration: none;
+     color:brown;
+   }
+   </style>
+   </head>
+   <body>
+   <header>
+     <div id='logo'>
+   		<a href="index.html"><img src='./img/logo.png'width="150px"height="73px"></a>
+   	</div>
+   	<nav id='menus'>
+   		<ul id='main_menu'>
+   			<li><a href="Summer.html">Summer</a></li>
+   			<li><a href="Story.html">Story</a></li>
+   			<li><a href="We.html">We</a></li>
+   			<li><a href="Others.html">Others</a></li>
+   		</ul>
+   	</nav>
+   </header>
+
+   <div class="section">
+     <input type="radio" name="slide" id="slide01" checked>
+     <input type="radio" name="slide" id="slide02">
+     <input type="radio" name="slide" id="slide03">
+
+     <div class="slidewrap">
+       <ul class="slidelist">
+         <li>
+           <a>
+             <label for="slide03" class="left"></label>
+             <img src="./img/main1.png">
+             <label for="slide02" class="right"></label>
+           </a>
+         </li>
+         <li>
+           <a>
+             <label for="slide01" class="left"></label>
+             <img src="./img/main2.jpg">
+             <label for="slide03" class="right"></label>
+           </a>
+         </li>
+         <li>
+           <a>
+             <label for="slide02" class="left"></label>
+             <img src="./img/main3.jpg">
+             <label for="slide01" class="right"></label>
+           </a>
+         </li>
+       </ul>
+     </div>
+
+   </div>
+   <footer>
+     <div id='footer_box'>
+   		<div id='footer_logo'>
+   			<img src='img/./logo.png'width="150px"height="73px">
+   		</div>
+   		<ul id='address'>
+   			<li>경기도 의왕시 계원대학로 66 우:123-1234</li>
+   			<li>TEL:031-1899-5823 Email : 22161121@kaywon.ac.kr</li>
+   			<li>COPYRIGHT (C) 최수빈 ALL RIGHTS RESERVED</li>
+   		</ul>
+   	</div>
+   </footer>
+   </body>
+   </html>
